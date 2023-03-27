@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Response Submitted</title>
+  </head>
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <body>
+    <h1>Response Submitted</h1>
+    <?php
+      $name = $_POST['name'];
+      $prn = $_POST['prn'];
+      $batch = $_POST['batch'];
+      $os = $_POST['os'];
+      $java = $_POST['java'];
+      $maths = $_POST['maths'];
+      $dsa = $_POST['dsa'];
+      $german = $_POST['german'];
+
+      // Store the responses in a database or file
+      // ...
+
+      // Email the responses to the student
+      $to = "studentemail@example.com";
+      $subject = "Subject Ratings";
+      $message = "Dear $name,\n\nThank you for submitting your subject ratings.\n\nOperating System: $os\nJava: $java\nMaths: $maths\nData Structures and Algorithms: $dsa\nGerman: $german\n\n

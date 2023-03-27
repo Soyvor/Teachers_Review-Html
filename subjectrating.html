@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Subject Rating Page</title>
+  </head>
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <body>
+    <h1>Subject Rating</h1>
+    <form action="store.php" method="POST">
+      <p>Rate the following subjects from best to worst:</p>
+      <ol>
+        <li>Operating System<input type="number" name="os" min="1" max="5" required></li>
+        <li>Java<input type="number" name="java" min="1" max="5" required></li>
+        <li>Maths<input type="number" name="maths" min="1" max="5" required></li>
+        <li>Data Structures and Algorithms<input type="number" name="dsa" min="1" max="5" required></li>
+        <li>German<input type="number" name="german" min="1" max="5" required></li>
+      </ol>
+      <input type="hidden" name="name" value="<?php echo $_POST['name']; ?>">
+      <input type="hidden" name="prn" value="<?php echo $_POST['prn']; ?>">
+      <input type="hidden" name="batch" value="<?php echo $_POST['batch']; ?>">
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
